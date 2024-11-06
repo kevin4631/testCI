@@ -46,30 +46,34 @@ jobs:
           curl -X POST ${{ secrets.KEY_BOT }} \
           -H "Content-Type: application/json" \
           -d '{
-              "embeds": [
-                {
-                  "title": "🚀 Build Success!",
-                  "description": "Your build has completed successfully! 🎉",
-                  "color": 3066993,
-                  "fields": [
-                    {
-                      "name": "Build Status",
-                      "value": "✅ SUCCESS",
-                      "inline": true
-                    },
-                    {
-                      "name": "Time Taken",
-                      "value": "⏱️ 5 minutes",
-                      "inline": true
-                    }
-                  ],
-                  "footer": {
-                    "text": "CI Pipeline - Powered by GitHub Actions"
+            "embeds": [
+              {
+                "title": "💥 Le Build Est Vraiment Fini... Pour de Bon ? 💥",
+                "description": "Woooow! On a survécu! Tout s'est bien passé. 🎉\n\nLes tests sont comme des pizzas... parfois ça marche, parfois ça brûle. 🍕🔥",
+                "color": 16711680,
+                "fields": [
+                  {
+                    "name": "Les Bugs ?",
+                    "value": "🧹 Tous les bugs ont été envoyés en vacances... mais on sait qu'ils reviendront un jour. 🐞💀",
+                    "inline": true
                   },
-                  "thumbnail": {
-                    "url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                  {
+                    "name": "Temps de Build",
+                    "value": "⏳ C'était long, mais je pense que j'ai fait 5 tours de café. ☕🏃‍♂️",
+                    "inline": true
+                  },
+                  {
+                    "name": "Et Maintenant ?",
+                    "value": "🔥 Prêt pour la production ou juste pour regarder des memes sur Reddit... 😎",
+                    "inline": false
                   }
+                ],
+                "footer": {
+                  "text": "Parce que coder, c'est aussi un peu vivre dangereusement 🦸‍♂️"
+                },
+                "image": {
+                  "url": "https://giphy.com/embed/rdma0nDFZMR32"
                 }
-              ]
-            }'
-    
+              }
+            ]
+          }
