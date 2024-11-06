@@ -42,4 +42,8 @@ jobs:
         run: npm start
       
       - name: send mail
-        run: curl -X POST ${{ secrets.KEY_BOT }}
+        run: |
+          curl -X POST ${{ secrets.KEY_BOT }} \
+          -H "Content-Type: application/json" \
+          -d '{"status":"success","message":"Build completed"}'
+        
