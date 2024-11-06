@@ -40,7 +40,7 @@ jobs:
 
       - name: Build application
         run: npm start
-      
+            
       - name: send mail
         run: |
           curl -X POST ${{ secrets.KEY_BOT }} \
@@ -72,8 +72,8 @@ jobs:
                   "text": "Parce que coder, c'est aussi un peu vivre dangereusement 🦸‍♂️"
                 },
                 "image": {
-                  "url": "https://giphy.com/embed/rdma0nDFZMR32"
+                  "url": "https://media.giphy.com/media/rdma0nDFZMR32/giphy.gif"
                 }
               }
             ]
-          }
+          }'
