@@ -45,5 +45,5 @@ jobs:
         run: |
           curl -X POST ${{ secrets.KEY_BOT }} \
           -H "Content-Type: application/json" \
-          -d '{"status":"success","text":"Kev"}'
+          -d '{"content": "Kev: Build completed successfully!"}'
         
