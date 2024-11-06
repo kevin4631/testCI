@@ -42,4 +42,4 @@ jobs:
         run: npm start
       
       - name: send mail
-        run: curl -X POST ${{ key.KEY_BOT }}
+        run: curl -X POST ${{ secrets.KEY_BOT }}
