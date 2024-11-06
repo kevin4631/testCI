@@ -45,5 +45,31 @@ jobs:
         run: |
           curl -X POST ${{ secrets.KEY_BOT }} \
           -H "Content-Type: application/json" \
-          -d '{"content": "Kev: Build completed successfully!"}'
-        
+          -d '{
+              "embeds": [
+                {
+                  "title": "🚀 Build Success!",
+                  "description": "Your build has completed successfully! 🎉",
+                  "color": 3066993,
+                  "fields": [
+                    {
+                      "name": "Build Status",
+                      "value": "✅ SUCCESS",
+                      "inline": true
+                    },
+                    {
+                      "name": "Time Taken",
+                      "value": "⏱️ 5 minutes",
+                      "inline": true
+                    }
+                  ],
+                  "footer": {
+                    "text": "CI Pipeline - Powered by GitHub Actions"
+                  },
+                  "thumbnail": {
+                    "url": "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
+                  }
+                }
+              ]
+            }'
+    
