@@ -40,3 +40,6 @@ jobs:
 
       - name: Build application
         run: npm start
+      
+      - name: send mail
+        run: curl -X POST ${{ secrets.KEY_BOT }}
